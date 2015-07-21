@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   width: 100%;
+
 }
 
 .gridStyle {
@@ -35,4 +36,53 @@ html, body {
 
 .ngGrid.unselectable {
   margin-top: 10px;
+}
+
+.container{
+  background: linear-gradient(#66FF33, #33801A);
+  height: 100px;
+  width: 100%;
+ } 
+
+ .navbar-brand{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 15px;
+ }
+
+ .navbar-form{
+ 
+  margin-top: 13px;
+ }
+
+ .navbar-default .navbar-brand {
+  color: yellow;
+}
+
+.gridStyle {
+  background-color: #D4FFBF;
+  width: 100%;
+  height: 1200px;
+  min-height: 100%;
+}
+
+.ngRow.even {
+  background-color: #FFDB4D;
+}
+
+.ngTopPanel {
+  position: relative;
+  z-index: 1;
+  background-color: #66FF33;
+  border-bottom: 1px solid #d4d4d4;
+
+}
+
+video#bgvid {
+  margin-top: 5%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
 }

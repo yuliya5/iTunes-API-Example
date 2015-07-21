@@ -18,12 +18,20 @@ app.controller('mainCtrl', function($scope, itunesService){
       ]
   };
 
+
+
   //Our controller is what's going to connect our 'heavy lifting' itunesService with our view (index.html) so our user can see the results they get back from itunes.
 
   //First inject itunesService into your controller.
 
     //code here
 
+$scope.getSongData = function(){ //<-- this connects it to the view. It doesn't take any parameters, because ng-model="artist" exists already. This value will exist on scope in the controller. 
+  itunesService.getArtist($scope.artist) //<-- this connects it to the service
+    .then(function(response){
+      $scope.songData = response; // <-- this was per the instructions above ^
+    })
+}
 
   //Now write a function that will call the method on the itunesService that is responsible for getting the data from iTunes, whenever the user clicks the submit button
   //*remember, that method should be expecting an artist name. The artist name is coming from the input box on index.html, head over there and check if that input box is tied to any specific model we could use.
